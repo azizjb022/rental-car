@@ -2,7 +2,7 @@
 import { ref, computed } from "vue";
 
 // Nomor kontak WhatsApp Admin (format internasional tanpa tanda +)
-const adminWhatsApp = "6281234567890";
+const adminWhatsApp = "6282245835588";
 
 // Layanan Utama
 const services = [
@@ -113,7 +113,6 @@ const filteredCars = computed(() => {
     const matchCategory =
       selectedCategory.value === "Semua" ||
       car.type.includes(selectedCategory.value);
-    // Jika tab Lepas Kunci, sembunyikan mobil yang tidak bisa lepas kunci
     const canSelfDrive =
       activeTab.value === "selfDrive" ? car.priceSelfDrive > 0 : true;
     return matchCategory && canSelfDrive;
@@ -147,7 +146,7 @@ const sendToWhatsApp = () => {
   const total = tariff * f.days;
 
   const text =
-    `Halo Admin, saya ingin rental mobil via website:%0A%0A` +
+    `Halo Admin Albizar Rent Car Kartasura, saya ingin rental mobil via website:%0A%0A` +
     `*Unit:* ${car.name}%0A` +
     `*Paket:* ${f.serviceType}%0A` +
     `*Nama Penyewa:* ${f.name}%0A` +
@@ -173,8 +172,11 @@ const sendToWhatsApp = () => {
         class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2"
       >
         <div class="flex items-center gap-4">
-          <span>📍 Layanan 24 Jam Antar-Jemput Bandara & Kota</span>
-          <span>📞 Hotline: +62 812-3456-7890</span>
+          <span
+            >📍 Kartasura — Layanan 24 Jam Antar-Jemput Bandara & Solo
+            Raya</span
+          >
+          <span>📞 Hotline: +62 822-4583-5588</span>
         </div>
         <div class="text-amber-400 font-medium">
           Armada Bersih, Nyaman, & Terawat
@@ -189,12 +191,12 @@ const sendToWhatsApp = () => {
       >
         <div>
           <h1 class="text-2xl font-black tracking-tight text-slate-900">
-            SATRIA<span class="text-amber-500">RENT</span>CAR
+            ALBIZAR<span class="text-amber-500">RENT</span>CAR
           </h1>
           <p
             class="text-[10px] tracking-widest text-slate-400 uppercase font-semibold"
           >
-            Jasa Rental Mobil Terpercaya
+            Jasa Rental Mobil Terpercaya Kartasura
           </p>
         </div>
 
@@ -233,16 +235,16 @@ const sendToWhatsApp = () => {
           <span
             class="text-amber-400 font-semibold tracking-wider text-xs uppercase bg-amber-400/10 px-3 py-1 rounded-full border border-amber-400/30"
           >
-            Sewa Mobil Murah & Berkualitas
+            Sewa Mobil Murah & Berkualitas di Kartasura
           </span>
           <h2 class="text-3xl sm:text-5xl font-black mt-4 leading-tight">
             Perjalanan Aman & Nyaman Bersama
-            <span class="text-amber-400">Armada Pilihan</span>
+            <span class="text-amber-400">Albizar Rent Car</span>
           </h2>
           <p class="text-slate-300 text-sm sm:text-base mt-4 leading-relaxed">
             Menyediakan rental mobil lepas kunci dan paket dengan supir
-            profesional untuk area dalam dan luar kota, antar jemput bandara,
-            hingga perjalanan dinas.
+            profesional untuk area Kartasura, Solo Raya, hingga luar kota, antar
+            jemput bandara, maupun kebutuhan dinas instansi.
           </p>
           <div class="mt-8 flex flex-wrap gap-4">
             <a
@@ -252,7 +254,7 @@ const sendToWhatsApp = () => {
               Lihat Daftar Mobil
             </a>
             <a
-              :href="`https://wa.me/${adminWhatsApp}?text=Halo%20Admin,%20saya%20ingin%20tanya%20sewa%20mobil`"
+              :href="`https://wa.me/${adminWhatsApp}?text=Halo%20Admin%20Albizar%20Rent%20Car,%20saya%20ingin%20tanya%20sewa%20mobil`"
               target="_blank"
               class="border border-white/20 hover:bg-white/10 text-white font-semibold text-sm px-6 py-3 rounded-lg transition"
             >
@@ -264,7 +266,7 @@ const sendToWhatsApp = () => {
         <div class="w-full md:w-1/2">
           <img
             src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?w=800&auto=format&fit=crop&q=80"
-            alt="Rental Mobil"
+            alt="Rental Mobil Albizar"
             class="rounded-2xl shadow-2xl border border-slate-700/50 object-cover w-full max-h-80"
           />
         </div>
@@ -278,7 +280,8 @@ const sendToWhatsApp = () => {
           Layanan Terbaik Kami
         </h3>
         <p class="text-slate-500 text-sm mt-2">
-          Solusi transportasi fleksibel sesuai kebutuhan agenda Anda
+          Solusi transportasi fleksibel berbasis di Kartasura untuk seluruh
+          agenda Anda
         </p>
       </div>
 
@@ -432,7 +435,7 @@ const sendToWhatsApp = () => {
         class="bg-gradient-to-br from-slate-900 to-indigo-950 rounded-3xl p-8 sm:p-12 text-white"
       >
         <h3 class="text-2xl sm:text-3xl font-bold text-center mb-10">
-          Kenapa Memilih Layanan Kami?
+          Kenapa Memilih Albizar Rent Car?
         </h3>
         <div
           class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center"
@@ -441,28 +444,32 @@ const sendToWhatsApp = () => {
             <div class="text-3xl mb-3">🧼</div>
             <h5 class="font-bold text-base mb-1">Armada Bersih & Wangi</h5>
             <p class="text-xs text-slate-400">
-              Mobil selalu dicuci dan disanitasi sebelum diantar ke penyewa.
+              Mobil selalu dicuci dan disanitasi sebelum diserahterimakan ke
+              penyewa.
             </p>
           </div>
           <div>
             <div class="text-3xl mb-3">🛡️</div>
             <h5 class="font-bold text-base mb-1">Kondisi Mesin Prima</h5>
             <p class="text-xs text-slate-400">
-              Servis rutin berkala di bengkel resmi demi keamanan perjalanan.
+              Servis rutin berkala di bengkel resmi demi keamanan perjalanan
+              Anda.
             </p>
           </div>
           <div>
             <div class="text-3xl mb-3">⏱️</div>
             <h5 class="font-bold text-base mb-1">Jemput Tepat Waktu</h5>
             <p class="text-xs text-slate-400">
-              Garansi penjemputan on-time untuk bandara dan jadwal penting Anda.
+              Garansi ketepatan waktu penjemputan stasiun, bandara, atau alamat
+              hotel.
             </p>
           </div>
           <div>
             <div class="text-3xl mb-3">🤝</div>
             <h5 class="font-bold text-base mb-1">Syarat Mudah & Cepat</h5>
             <p class="text-xs text-slate-400">
-              Verifikasi dokumen lepas kunci simpel tanpa proses berbelit.
+              Verifikasi dokumen lepas kunci simpel tanpa prosedur yang
+              berbelit.
             </p>
           </div>
         </div>
@@ -477,10 +484,15 @@ const sendToWhatsApp = () => {
         class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4 text-center sm:text-left"
       >
         <div>
-          <p class="text-base font-bold text-white">SATRIA RENT CAR</p>
-          <p class="mt-1">Pusat Layanan Sewa Mobil Terpercaya & Terlengkap.</p>
+          <p class="text-base font-bold text-white">ALBIZAR RENT CAR</p>
+          <p class="mt-1">
+            Alamat: Kartasura, Jawa Tengah | Hotline: +62 822-4583-5588
+          </p>
+          <p class="text-slate-500 text-[11px] mt-0.5">
+            Pusat Layanan Sewa Mobil Terpercaya & Terlengkap Area Solo Raya.
+          </p>
         </div>
-        <p>&copy; 2026 Satria Rent Car. Hak Cipta Dilindungi.</p>
+        <p>&copy; 2026 Albizar Rent Car. Hak Cipta Dilindungi.</p>
       </div>
     </footer>
 
@@ -506,7 +518,8 @@ const sendToWhatsApp = () => {
           Formulir Pemesanan Unit
         </h4>
         <p class="text-xs text-slate-500 mb-4">
-          Mobil: <strong>{{ selectedCar?.name }}</strong>
+          Mobil: <strong>{{ selectedCar?.name }}</strong> | Lokasi Unit:
+          Kartasura
         </p>
 
         <form @submit.prevent="sendToWhatsApp" class="space-y-4">
@@ -538,7 +551,7 @@ const sendToWhatsApp = () => {
               v-model="bookingForm.name"
               type="text"
               required
-              placeholder="Contoh: Rahmat Hidayat"
+              placeholder="Contoh: Budi Santoso"
               class="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-amber-500 outline-none"
             />
           </div>
@@ -553,7 +566,7 @@ const sendToWhatsApp = () => {
                 v-model="bookingForm.phone"
                 type="tel"
                 required
-                placeholder="081234567890"
+                placeholder="082245835588"
                 class="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-amber-500 outline-none"
               />
             </div>
@@ -590,12 +603,12 @@ const sendToWhatsApp = () => {
           <div>
             <label
               class="block text-xs font-semibold text-slate-700 uppercase mb-1"
-              >Catatan Tambahan (Opsional)</label
+              >Catatan / Alamat Antar (Opsional)</label
             >
             <textarea
               v-model="bookingForm.notes"
               rows="2"
-              placeholder="Contoh: Jemput di Bandara Kualanamu jam 10 pagi"
+              placeholder="Contoh: Antar ke daerah Kartasura jam 8 pagi"
               class="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-amber-500 outline-none"
             ></textarea>
           </div>
